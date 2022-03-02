@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+body{
+   background-color: #0B1413;
+}
+header{
+   
+    background-image: linear-gradient(to right, #8F2029,#0B1413);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns:0.1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    text-align: center;
+    align-content:center;
+
+    
+    
+    /*grid-area: h;*/
+}
+main{
+  
+   background-color: #0B1413;
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /*grid-area: m;*/
+}
+aside{
+    margin-top: 20px;
+   
+  
+   
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+   
+    /*grid-area: a;*/
+}
+footer{
+   
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /*grid-area: f;*/
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 10% 80% 10%;
+    
+  
+    /*grid-template-areas: "h h"
+    "m a" 
+    "f f";*/
+    
+}
+
+div{
+    color:white;
+    
+}
+
+.menu:hover
+{ background-color: #e2aa1144; 
+
+transition: 0.5s;
+
+opacity: 0.7;
+
+}
+
+
+main > #text{
+    text-indent: 100px;
+   
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    color: #FBFB92;
+    font-family: 'Architects Daughter', cursive;
+    height: 80%;
+
+}
+main > #text2{
+    text-indent: 100px;
+  
+    margin-right: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    color: #FBFB92;
+    font-family: 'Architects Daughter', cursive;
+    height: 80%;
+
+}
+
+
+#futer{
+    margin-top: 10px;
+}
+
+.menu{
+    font-size:20px;
+}
+
+
+
+
+
+.slider{
+    width: 429px;
+    height: 510px;
+}

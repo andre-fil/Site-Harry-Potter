@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <title>Grid</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+           #slider {
+       position: relative;
+       overflow: hidden;
+       margin: 20px auto 0 auto;
+       border-radius: 4px;
+   }
+   #slider ul {
+       position: relative;
+       margin: 0;
+       padding: 0;
+      
+       list-style: none;
+   }
+   #slider ul li {
+       position: relative;
+       display: block;
+       float: left;
+       margin: 0;
+       padding: 0;
+       width: 429px;
+       height: 510px;
+       text-align: center;
+       line-height: 300px;
+   }
+   a.control_prev, a.control_next {
+       position: absolute;
+       top: 40%;
+       z-index: 999;
+       display: block;
+       padding: 4% 3%;
+       width: auto;
+       height: auto;
+       background: #2a2a2a;
+       color: #fff;
+       text-decoration: none;
+       font-weight: 600;
+       font-size: 18px;
+       opacity: 0.8;
+       cursor: pointer;
+   }
+   a.control_prev:hover, a.control_next:hover {
+       opacity: 1;
+       -webkit-transition: all 0.2s ease;
+   }
+   a.control_prev {
+       border-radius: 0 2px 2px 0;
+   }
+   a.control_next {
+       right: 0;
+       border-radius: 2px 0 0 2px;
+   }
+   .slider_option {
+       position: relative;
+       margin: 10px auto;
+       width: 160px;
+       font-size: 18px;
+   }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <header>
+                <img src="Hogwarts_logo_PNG2.png" alt="logo hogwarts" width="40px" height="40px">
+               <div id="um" class="menu">Harry Potter</div>
+               <div id="dois" class="menu">Escola de Magia e bruxaria de Hogwarts</div>
+               <div id="tres" class="menu">Londres</div>
+               
+            </header>
+       
+        <main>
+            <div id="text">A Escola de Magia e Bruxaria de Hogwarts, ou simplesmente Hogwarts, é um internato de magia para bruxos e bruxas britânicos com idades entre onze e dezessete anos. É o palco principal dos primeiros seis livros da série Harry Potter, de J. K. Rowling, cada livro equivalendo a um ano letivo. No volume derradeiro da série, Harry Potter e as Relíquias da Morte, no entanto, a maior parte da história se passa fora de Hogwarts, uma vez que os personagens principais, Harry Potter, Ronald Weasley e Hermione Granger, não atendem ao sétimo e último grau de ensino (embora Rowling tenha declarado que Hermione retorna à escola depois dos acontecimentos descritos em Harry Potter e as Relíquias da Morte para prestar os seus exames de Níveis Incrivelmente Exaustivos de Magia). A batalha climática do livro e da série, no entanto, ocorre em Hogwarts.</div>
+            <div id="text2">O Castelo de Hogwarts está localizado na Escócia, num local desconhecido (no livro Harry Potter e o Prisioneiro de Azkaban é dito que fica perto de Dufftown), próximo da vila de Hogsmeade. Os Muggles (Trouxas, na tradução brasileira) não conseguem nem ver, nem localizar a escola uma vez que esta possui imensos feitiços e encantamentos de proteção, sendo que os Muggles apenas veem ruínas e sinais de aviso para se afastarem.
+
+            O castelo possui longos terrenos cobertos de relva, um campo de Quidditch (Quadribol, na tradução brasileira), um lago (chamado de O Lago Negro), uma grande e densa floresta (chamada de Floresta Proibida), entre outras construções. O castelo possui também a Torre das Corujas (ou Corujal) [1] que abriga todas as corujas da escola e dos alunos. Existem 142 escadarias no castelo de Hogwarts (ver notas).[1] (A sua movimentação nunca foi descrita nos livros, apenas para as adaptações dos filmes, exceto do último, que seguiu fiel aos livros).
+                
+            </div>
+        </main>
+        <aside>
+            <div id="slider">
+                <a href="#" class="control_next">></a>
+                <a href="#" class="control_prev"><</a>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/123.jpg" class="slider">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/Hogwarts_logo_PNG2.png"  class="slider">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/aa.png" class="slider" >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/ll.jpg"  class="slider">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <footer>
+        <img src="aa.png" alt="logo hogwarts" width="40px" height="40px" id="futer"> 
+        
+        <div id="futer">
+            &copy;Harry Potter
+        </div>
+     
+                   
+            
+        </footer>
+    </div>
+    
+    <script>
+        $(function() {
+        $('#checkbox').change(function () {
+            setInterval(function () {
+                moveRight();
+            }, 3000);
+        });
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        var sliderUlWidth = slideCount * slideWidth;
+        $('#slider').css({
+            width: slideWidth,
+            height: slideHeight
+        });
+        $('#slider ul').css({
+            width: sliderUlWidth,
+            marginLeft: -slideWidth
+        });
+        $('#slider ul li:last-child').prependTo('#slider ul');
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: +slideWidth
+            }, 200, function () {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+        function moveRight() {
+            $('#slider ul').animate({
+                left: -slideWidth
+            }, 200, function () {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+        $('a.control_prev').click(function () {
+            moveLeft();
+        });
+        $('a.control_next').click(function () {
+            moveRight();
+        });
+    });
+    </script>
+</body>
+</html>
