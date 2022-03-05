@@ -39,6 +39,7 @@ main{
 aside{
     grid-column-start: 2;
     grid-column-end: 3;
+
   
 }
 
@@ -58,16 +59,24 @@ footer{
 .casa{
     align-self: center;
     justify-self: center;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 15%;
     border-style:hidden;
-   
+    text-align: center;
     
  
+   
+    box-shadow:5px 5px 5px black;
+ 
   width: 60%;
-  height: 60%;
+  height: 80%;
    
 }
+
+
+
 
 #sly{
     background: rgb(15,209,17);
@@ -76,6 +85,10 @@ background: linear-gradient(45deg, rgba(15,209,17,1) 2%, rgba(26,158,44,1) 8%, r
 #gryff{
     background: rgb(209,15,15);
 background: linear-gradient(45deg, rgba(209,15,15,1) 2%, rgba(158,26,26,1) 8%, rgba(166,31,31,1) 14%, rgba(126,8,8,1) 20%, rgba(126,8,8,1) 61%, rgba(126,8,8,1) 70%, rgba(126,8,8,1) 72%, rgba(191,16,16,1) 94%);
+
+    
+
+
 }
 
 #hup{
@@ -109,7 +122,35 @@ background: linear-gradient(45deg, rgba(21,15,209,1) 2%, rgba(22,24,163,1) 8%, r
         p{
             grid-column-start: 1;
             grid-column-end: 3;
-            color: aqua;
             
-
+            
         }
+
+       a:link, a:visited, a:active{
+            text-decoration: none;
+            color:#FFFFFF;
+        }
+
+
+#Cabeça{
+    text-align: center;
+    color: white;
+    font-size:30px;
+}
+
+#Lista{
+   
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    color: #FFFFFF;
+    text-decoration: overline;
+    text-overflow: ellipsis;
+    text-shadow:3px 3px 3px #0B1413;
+}
+
+#Lista > p{
+    margin-top: 30px;
+}
+

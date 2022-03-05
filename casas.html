@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="casas.css">
+    <script src="casas.js"></script>
+    
     <title>Casas</title>
 </head>
 <body>
     <header>
         <img src="img/Hogwarts_logo_PNG2.png" alt="logo hogwarts" width="40px" height="40px">
-        <div id="um" class="menu">Harry Potter</div>
+        <a href="Harry_Potter.html" target="_self">
+            <div id="um" class="menu">Harry Potter</div>
+        </a>
         <div id="dois" class="menu">Escola de Magia e bruxaria de Hogwarts</div>
         <div id="tres" class="menu">Londres</div>
         
     </header>
     <main>
       
-        <div class="casa" id="gryff">
-           
+        <div class="casa" id="gryff" onmouseenter="mudaCor_Gryf()" onmouseout="mudaCor_origin()">
+           <img src="img/griff.png" alt="grifinória"   onmouseenter="mudaCor_Gryf()" onmouseout="mudaCor_Gryf()" >
         </div>
-        <div class="casa" id="sly">
-            
+        <div class="casa" id="sly" onmouseenter="mudaCor_Sly()" onmouseout="mudaCor_origin()">
+            <img src="img/sly.png" alt="sonserina"   onmouseenter="mudaCor_Sly()" onmouseout="mudaCor_Sly()" >
               
         </div>
-        <div class="casa" id="hup">
+        <div class="casa" id="hup" onmouseenter="mudaCor_hup()" onmouseout="mudaCor_origin()">
+            <img src="img/luf.png" alt="lufa lufa"   onmouseenter="mudaCor_hup()" onmouseout="mudaCor_hup()" >
             
         </div>
-        <div class="casa" id="rav">
+        <div class="casa" id="rav" onmouseenter="mudaCor_rav()" onmouseout="mudaCor_origin()">
+            <img src="img/rav.png" alt="Corvinal"   onmouseenter="mudaCor_rav()" onmouseout="mudaCor_rav()" >
+     
             
                
         </div>
@@ -38,8 +45,21 @@
    
     
    
-    <aside>
-aaaaaaaaaaaaaa
+    <aside id="corpo">
+
+        <h2 id="Cabeça"></h2>
+        <div id="Lista">
+            <p id="Brasão"></p>
+            <p id="Fundador"></p>
+            <p id="Cores"></p>
+            <p id="Valores"></p>
+            <p id="img"></p>
+            
+        </div>
+
+       
+       
+
     </aside>
 
     <desc>
